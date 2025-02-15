@@ -3,4 +3,3 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8adbb4e145c9f279f31e/maintainability)](https://codeclimate.com/github/iujhiy/java-project-61/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8adbb4e145c9f279f31e/test_coverage)](https://codeclimate.com/github/iujhiy/java-project-61/test_coverage)
