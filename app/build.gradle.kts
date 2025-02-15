@@ -2,6 +2,7 @@ plugins {
     id("java")
     id ("com.github.ben-manes.versions") version ("0.52.0")
     application
+    jacoco
 }
 
 group = "hexlet.code"
@@ -22,8 +23,11 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("org.apache.commons:commons-lang3:3.14.0")
 }
 
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
