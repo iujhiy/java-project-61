@@ -1,9 +1,9 @@
 plugins {
     id("java")
     id ("com.github.ben-manes.versions") version ("0.52.0")
+    checkstyle
     application
     jacoco
-    checkstyle
 }
 
 group = "hexlet.code"
@@ -17,6 +17,10 @@ tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
 }
 
+tasks.test {
+    useJUnitPlatform()
+}
+
 repositories {
     mavenCentral()
 }
@@ -27,8 +31,3 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.14.0")
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.jacocoTestReport { reports { xml.required.set(true) } }
