@@ -1,4 +1,4 @@
-package hexlet.code.games;
+package hexlet.code;
 
 import java.util.Scanner;
 
@@ -8,9 +8,22 @@ public class Engine {
         System.out.print("May I have your name? ");
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
-        scanner.close();
     }
-    public static void theLogicOfTheGame(String rightAnswer, String userAnswer) {
-
+    public static void theLogicOfTheGame(String rightAnswer, String task) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Question: " + task);
+        System.out.print("Your answer: ");
+        String userAnswer = scanner.next();
+        if (rightAnswer.equals(userAnswer)) {
+            System.out.println("Correct!");
+        } else {
+            System.out.println("'" + userAnswer + "'" + "is wrong answer ;(. Correct answer was "
+                    + "'" + rightAnswer + "'." );
+            //System.out.println("Let's try again " + userName);
+            System.exit(0);
+        }
+    }
+    public static void Congratulations(String userName) {
+        System.out.println("Congratulations, " + userName);
     }
 }
