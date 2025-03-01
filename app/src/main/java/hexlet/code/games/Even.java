@@ -1,31 +1,29 @@
-package hexlet.code;
+package hexlet.code.games;
 
-import hexlet.code.games.Engine;
-
+import hexlet.code.Engine;
 import java.util.Scanner;
 import java.util.Random;
 
 public class Even {
-
-    public static void Greet() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-        System.out.println("Answer 'yes' if the number is evenGame, otherwise answer 'no'.");
-        scanner.close();
-        evenGame(userName);
-    }
-
-    public static void evenGame(String userName) {
+    public static void evenGame() {
+        Engine.Greet();
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int randomNumber = random.nextInt(100);
-        String rightAnswer = String.valueOf(randomNumber);
-        System.out.println("Question: " + randomNumber);
-        String userAnswer = scanner.next();
-        System.out.println("Your answer: " + userAnswer);
-        scanner.close();
-        Engine.theLogicOfTheGame(rightAnswer, userAnswer);
+        for (int i = 0; i < 3; i++) {
+            String randomNumber = String.valueOf(random.nextInt(100));
+            //String rightAnswer = String.valueOf(randomNumber);
+//            System.out.println("Question: " + randomNumber);
+//            System.out.print("Your answer: ");
+            //String userAnswer = scanner.next();
+            int randomNumberToInteger = Integer.parseInt(randomNumber);
+            if (randomNumberToInteger % 2 == 0) {
+                Engine.theLogicOfTheGame("yes", randomNumber);
+            } else {
+                Engine.theLogicOfTheGame("no", randomNumber);
+            }
+        }
+        //Engine.Congratulations(userName);
+        System.exit(0);
     }
 }
