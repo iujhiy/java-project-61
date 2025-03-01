@@ -6,16 +6,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calculate {
-//    public static void Greet() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.print("May I have your name? ");
-//        String userName = scanner.next();
-//        System.out.println("Hello, " + userName + "!");
-//        //scanner.close();
-//        System.out.println("What is the result of the expression?");
-//        calculateGame(userName);
-//    }
-
     public static void calculateGame() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -43,6 +33,7 @@ public class Calculate {
             }
         }
         //System.out.println("Congratulations, " + userName);
+        scanner.close();
         System.exit(0);
     }
 }

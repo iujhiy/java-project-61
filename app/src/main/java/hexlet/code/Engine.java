@@ -20,6 +20,7 @@ public class Engine {
             System.out.println("'" + userAnswer + "'" + "is wrong answer ;(. Correct answer was "
                     + "'" + rightAnswer + "'." );
             //System.out.println("Let's try again " + userName);
+            scanner.close();
             System.exit(0);
         }
     }

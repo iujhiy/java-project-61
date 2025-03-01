@@ -12,10 +12,6 @@ public class Even {
         Random random = new Random();
         for (int i = 0; i < 3; i++) {
             String randomNumber = String.valueOf(random.nextInt(100));
-            //String rightAnswer = String.valueOf(randomNumber);
-//            System.out.println("Question: " + randomNumber);
-//            System.out.print("Your answer: ");
-            //String userAnswer = scanner.next();
             int randomNumberToInteger = Integer.parseInt(randomNumber);
             if (randomNumberToInteger % 2 == 0) {
                 Engine.theLogicOfTheGame("yes", randomNumber);
@@ -24,6 +20,7 @@ public class Even {
             }
         }
         //Engine.Congratulations(userName);
+        scanner.close();
         System.exit(0);
     }
 }

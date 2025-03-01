@@ -13,13 +13,13 @@ public class App {
                 1 - Greet
                 2 - Even
                 3 - Calculate
+                4 - GCD
                 0 - Exit
                 """);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         String choiceOfGame = scanner.nextLine();
-        //scanner.close();
 
         switch (choiceOfGame) {
             case("1"):
@@ -28,9 +28,10 @@ public class App {
                 Even.evenGame();
             case("3"):
                 Calculate.calculateGame();
-            case ("4"):
+            case("4"):
                 GCD.GCDGame();
             case("0"):
+                scanner.close();
                 System.exit(0);
             default:
                 System.out.println("Error! Enter the correct value!");
