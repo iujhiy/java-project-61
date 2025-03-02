@@ -16,20 +16,14 @@ public class Calculate {
             int randomNumber2 = random.nextInt(100);
             int randomSign = random.nextInt(3);
             if (randomSign == 0) {
-                var sum = randomNumber1 + randomNumber2;
-                String sumString = String.valueOf(sum);
-                String task = String.valueOf(randomNumber1 + " + " + randomNumber2);
-                Engine.theLogicOfTheGame(sumString, task);
+                String sumString = String.valueOf(randomNumber1 + randomNumber2);
+                Engine.theLogicOfTheGame(sumString, randomNumber1 + " + " + randomNumber2);
             } else if (randomSign == 1) {
-                var diff = randomNumber1 - randomNumber2;
-                String diffString = String.valueOf(diff);
-                String task = String.valueOf(randomNumber1 + " - " + randomNumber2);
-                Engine.theLogicOfTheGame(diffString, task);
+                String diffString = String.valueOf(randomNumber1 - randomNumber2);
+                Engine.theLogicOfTheGame(diffString, randomNumber1 + " - " + randomNumber2);
             } else if (randomSign == 2) {
-                var composition = randomNumber1 * randomNumber2;
-                String compositionString = String.valueOf(composition);
-                String task = String.valueOf(randomNumber1 + " * " + randomNumber2);
-                Engine.theLogicOfTheGame(compositionString, task);
+                String compositionString = String.valueOf(randomNumber1 * randomNumber2);
+                Engine.theLogicOfTheGame(compositionString, randomNumber1 + " * " + randomNumber2);
             }
         }
         //System.out.println("Congratulations, " + userName);
