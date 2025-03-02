@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calculate;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -16,6 +13,7 @@ public class App {
                 3 - Calculate
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit
                 """);
 
@@ -34,6 +32,8 @@ public class App {
                 GCD.GCDGame();
             case("5"):
                 Progression.progressionGame();
+            case("6"):
+                Prime.primeGame();
             case("0"):
                 scanner.close();
                 System.exit(0);
