@@ -27,6 +27,7 @@ public class Prime {
                 Engine.theLogicOfTheGame("no", task);
             }
         }
+        Engine.Congratulations();
         scanner.close();
         System.exit(0);
     }

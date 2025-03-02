@@ -28,6 +28,7 @@ public class Progression {
             String task = String.join(" ", progressionString);
             Engine.theLogicOfTheGame(rightAnswer, task);
         }
+        Engine.Congratulations();
         scanner.close();
         System.exit(0);
     }

@@ -26,7 +26,7 @@ public class Calculate {
                 Engine.theLogicOfTheGame(compositionString, randomNumber1 + " * " + randomNumber2);
             }
         }
-        //System.out.println("Congratulations, " + userName);
+        Engine.Congratulations();
         scanner.close();
         System.exit(0);
     }
