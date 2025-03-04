@@ -44,7 +44,3 @@ bin/
 #### out/ ###
 app/out/
 app/demo.cast
-
-### /workflows/ ###
-.github/workflows/README.md
-.github/workflows/hexlet-check.yml
