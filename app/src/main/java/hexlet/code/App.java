@@ -20,10 +20,9 @@ public class App {
                 5 - Progression
                 6 - Prime
                 0 - Exit
-                """);
+                """ + "Your choice: ");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Your choice: ");
         String choiceOfGame = scanner.nextLine();
 
         switch (choiceOfGame) {
