@@ -6,7 +6,7 @@ public class Engine {
     public static String userName;
     public static void greet() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("May I have your name? ");
+        System.out.print("Welcome to the Brain Games!\n" + "May I have your name? ");
         userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
     }
