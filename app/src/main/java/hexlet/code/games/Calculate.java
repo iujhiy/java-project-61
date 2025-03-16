@@ -21,7 +21,7 @@ public class Calculate {
             } else if (randomSign == 1) {
                 String diffString = String.valueOf(randomNumber1 - randomNumber2);
                 Engine.theLogicOfTheGame(diffString, randomNumber1 + " - " + randomNumber2);
-            } else if (randomSign == 2) {
+            } else {
                 String compositionString = String.valueOf(randomNumber1 * randomNumber2);
                 Engine.theLogicOfTheGame(compositionString, randomNumber1 + " * " + randomNumber2);
             }

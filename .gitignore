@@ -8,7 +8,7 @@ build/
 
 ### IntelliJ IDEA ###
 .idea/
-
+app/.idea/
 *.iws
 *.iml
 *.ipr
@@ -42,5 +42,4 @@ bin/
 .DS_Store
 
 #### out/ ###
-/out/
 app/demo.cast

@@ -14,8 +14,7 @@ public class Progression {
         for (int i = 0; i < 3; i++) {
             int lengthOfProgression = random.nextInt(5, 10);
             int stepOfProgression = random.nextInt(1, 15);
-            int firstElement = random.nextInt(15);
-            int elementOfProgression = firstElement;
+            int elementOfProgression = random.nextInt(15);
             StringBuilder progressionStringBuilder = new StringBuilder();
             for (int j = 0; j < lengthOfProgression; j++) {
                 progressionStringBuilder.append(elementOfProgression).append(" ");
