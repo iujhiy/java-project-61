@@ -26,6 +26,6 @@ public class Engine {
         }
     }
     public static void congratulations() {
-        System.out.println("Congratulations, " + userName);
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
