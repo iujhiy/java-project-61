@@ -11,9 +11,9 @@ public class Calculate {
         Random random = new Random();
         Engine.greet();
         System.out.println("What is the result of the expression?");
-        int countOfRoundsOfTheGame = 3;
-        int maxNumber = 100;
-        int maxSign = 3;
+        final int countOfRoundsOfTheGame = 3;
+        final int maxNumber = 100;
+        final int maxSign = 3;
         for (int i = 0; i < countOfRoundsOfTheGame; i++) {
             int randomNumber1 = random.nextInt(maxNumber);
             int randomNumber2 = random.nextInt(maxNumber);

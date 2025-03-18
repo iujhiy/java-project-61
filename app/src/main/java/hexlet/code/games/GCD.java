@@ -6,14 +6,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GCD {
-    private static final int countOfRoundsOfTheGame = 3;
-    private static final int maxNumber = 100;
     public static void gcdGame() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         Engine.greet();
         System.out.println("Find the greatest common divisor of given numbers.");
+        final int countOfRoundsOfTheGame = 3;
         final int minNumber = 1;
+        final int maxNumber = 100;
         for (int i = 0; i < countOfRoundsOfTheGame; i++) {
             int gcd = 1;
             int randomNumber1 = random.nextInt(minNumber, maxNumber);

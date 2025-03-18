@@ -10,8 +10,8 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int countOfroundsOfTheGame = 3;
-        int maxNumber = 100;
+        final int countOfroundsOfTheGame = 3;
+        final int maxNumber = 100;
         for (int i = 0; i < countOfroundsOfTheGame; i++) {
             String randomNumber = String.valueOf(random.nextInt(maxNumber));
             int randomNumberToInteger = Integer.parseInt(randomNumber);

@@ -11,12 +11,12 @@ public class Progression {
         Random random = new Random();
         Engine.greet();
         System.out.println("What number is missing in the progression?");
-        int countOfRoundsOfTheGame = 3;
-        int minLengthOfProgression = 5;
-        int maxLengthOfProgression = 10;
-        int minStepOfProgression = 1;
-        int maxStepOfProgression = 15;
-        int maxElementOfProgression = 15;
+        final int countOfRoundsOfTheGame = 3;
+        final int minLengthOfProgression = 5;
+        final int maxLengthOfProgression = 10;
+        final int minStepOfProgression = 1;
+        final int maxStepOfProgression = 15;
+        final int maxElementOfProgression = 15;
         for (int i = 0; i < countOfRoundsOfTheGame; i++) {
             int lengthOfProgression = random.nextInt(minLengthOfProgression, maxLengthOfProgression);
             int stepOfProgression = random.nextInt(minStepOfProgression, maxStepOfProgression);
