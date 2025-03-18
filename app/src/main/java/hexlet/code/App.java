@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("""
+                Welcome to the Brain Games!
                 Please enter the game number and press Enter.
                 1 - Greet
                 2 - Even
@@ -21,10 +22,8 @@ public class App {
                 6 - Prime
                 0 - Exit
                 """ + "Your choice: ");
-
         Scanner scanner = new Scanner(System.in);
         String choiceOfGame = scanner.nextLine();
-
         switch (choiceOfGame) {
             case("1"):
                 Cli.welcome();
