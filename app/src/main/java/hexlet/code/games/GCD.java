@@ -11,9 +11,9 @@ public class GCD {
         Random random = new Random();
         Engine.greet();
         System.out.println("Find the greatest common divisor of given numbers.");
-        int countOfRoundsOfTheGame = 3;
-        int minNumber = 1;
-        int maxNumber = 100;
+        final int countOfRoundsOfTheGame = 3;
+        final int minNumber = 1;
+        final int maxNumber = 100;
         for (int i = 0; i < countOfRoundsOfTheGame; i++) {
             int gcd = 1;
             int randomNumber1 = random.nextInt(minNumber, maxNumber);
