@@ -11,8 +11,11 @@ public class Prime {
         Random random = new Random();
         Engine.greet();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (int j = 0; j < 3; j++) {
-            var randomNumber = random.nextInt(2, 100);
+        int countOfRoundsOfTheGame = 3;
+        int minNumber = 2;
+        int maxNumber = 100;
+        for (int j = 0; j < countOfRoundsOfTheGame; j++) {
+            var randomNumber = random.nextInt(minNumber, maxNumber);
             boolean isPrime = true;
             for (int i = 2; i <= Math.sqrt(randomNumber); i++) {
                 if (randomNumber % i == 0) {

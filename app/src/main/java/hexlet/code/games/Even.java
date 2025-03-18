@@ -10,8 +10,10 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        for (int i = 0; i < 3; i++) {
-            String randomNumber = String.valueOf(random.nextInt(100));
+        int countOfroundsOfTheGame = 3;
+        int maxNumber = 100;
+        for (int i = 0; i < countOfroundsOfTheGame; i++) {
+            String randomNumber = String.valueOf(random.nextInt(maxNumber));
             int randomNumberToInteger = Integer.parseInt(randomNumber);
             if (randomNumberToInteger % 2 == 0) {
                 Engine.theLogicOfTheGame("yes", randomNumber);

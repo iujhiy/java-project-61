@@ -11,10 +11,13 @@ public class Calculate {
         Random random = new Random();
         Engine.greet();
         System.out.println("What is the result of the expression?");
-        for (int i = 0; i < 3; i++) {
-            int randomNumber1 = random.nextInt(100);
-            int randomNumber2 = random.nextInt(100);
-            int randomSign = random.nextInt(3);
+        int countOfRoundsOfTheGame = 3;
+        int maxNumber = 100;
+        int maxSign = 3;
+        for (int i = 0; i < countOfRoundsOfTheGame; i++) {
+            int randomNumber1 = random.nextInt(maxNumber);
+            int randomNumber2 = random.nextInt(maxNumber);
+            int randomSign = random.nextInt(maxSign);
             if (randomSign == 0) {
                 String sumString = String.valueOf(randomNumber1 + randomNumber2);
                 Engine.theLogicOfTheGame(sumString, randomNumber1 + " + " + randomNumber2);

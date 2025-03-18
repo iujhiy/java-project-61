@@ -11,10 +11,13 @@ public class GCD {
         Random random = new Random();
         Engine.greet();
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < 3; i++) {
+        int countOfRoundsOfTheGame = 3;
+        int minNumber = 1;
+        int maxNumber = 100;
+        for (int i = 0; i < countOfRoundsOfTheGame; i++) {
             int gcd = 1;
-            int randomNumber1 = random.nextInt(1, 100);
-            int randomNumber2 = random.nextInt(1, 100);
+            int randomNumber1 = random.nextInt(minNumber, maxNumber);
+            int randomNumber2 = random.nextInt(minNumber, maxNumber);
             for (int j = 1; i <= randomNumber1 && j <= randomNumber2; j++) {
                 if (randomNumber1 % j == 0 && randomNumber2 % j == 0) {
                     gcd = j;
