@@ -2,31 +2,25 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class Progression {
     public static void progressionGame() {
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
         Engine.greet();
         System.out.println("What number is missing in the progression?");
-        final int countOfRoundsOfTheGame = 3;
         final int minLengthOfProgression = 5;
         final int maxLengthOfProgression = 10;
         final int minStepOfProgression = 1;
         final int maxStepOfProgression = 15;
         final int maxElementOfProgression = 15;
-        for (int i = 0; i < countOfRoundsOfTheGame; i++) {
-            int lengthOfProgression = random.nextInt(minLengthOfProgression, maxLengthOfProgression);
-            int stepOfProgression = random.nextInt(minStepOfProgression, maxStepOfProgression);
-            int elementOfProgression = random.nextInt(maxElementOfProgression);
+        for (int i = 0; i < Engine.countOfRoundsOfTheGame(); i++) {
+            int lengthOfProgression = Engine.randomNumber(minLengthOfProgression, maxLengthOfProgression);
+            int stepOfProgression = Engine.randomNumber(minStepOfProgression, maxStepOfProgression);
+            int elementOfProgression = Engine.randomNumber(0, maxElementOfProgression);
             StringBuilder progressionStringBuilder = new StringBuilder();
             for (int j = 0; j < lengthOfProgression; j++) {
                 progressionStringBuilder.append(elementOfProgression).append(" ");
                 elementOfProgression += stepOfProgression;
             }
-            int randomElement = random.nextInt(0, lengthOfProgression);
+            int randomElement = Engine.randomNumber(0, lengthOfProgression);
             String[] progressionString = progressionStringBuilder.toString().split(" ");
             var rightAnswer = progressionString[randomElement];
             progressionString[randomElement] = "..";
@@ -34,7 +28,6 @@ public class Progression {
             Engine.theLogicOfTheGame(rightAnswer, task);
         }
         Engine.congratulations();
-        scanner.close();
         System.exit(0);
     }
 }
