@@ -19,7 +19,7 @@ public class Engine {
     }
 
     public static int countOfRoundsOfTheGame() {
-        var countOfRounds = 3;
+        final int countOfRounds = 3;
         return countOfRounds;
     }
 
