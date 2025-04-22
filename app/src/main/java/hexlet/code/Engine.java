@@ -1,5 +1,11 @@
 package hexlet.code;
 
+import hexlet.code.games.Calculate;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,11 +22,6 @@ public class Engine {
     public static int randomNumber(int min, int max) {
         Random random = new Random();
         return random.nextInt(min, max);
-    }
-
-    public static int countOfRoundsOfTheGame() {
-        final int countOfRounds = 3;
-        return countOfRounds;
     }
 
     public static void theLogicOfTheGame(String rightAnswer, String task) {
@@ -41,5 +42,25 @@ public class Engine {
 
     public static void congratulations() {
         System.out.println("Congratulations, " + userName + "!");
+    }
+
+    public static void choiceOfTheGame(String choice) {
+        switch (choice) {
+            case ("2"):
+                Even.evenGame();
+                break;
+            case ("3"):
+                Calculate.calculateGame();
+                break;
+            case ("4"):
+                GCD.gcdGame();
+                break;
+            case ("5"):
+                Progression.progressionGame();
+                break;
+            default:
+                Prime.primeGame();
+                break;
+        }
     }
 }

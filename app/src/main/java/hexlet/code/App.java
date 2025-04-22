@@ -1,10 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.Calculate;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Prime;
-import hexlet.code.games.Progression;
+//import hexlet.code.games.Calculate;
+//import hexlet.code.games.Even;
+//import hexlet.code.games.GCD;
+//import hexlet.code.games.Prime;
+//import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -23,25 +23,32 @@ public class App {
                 """ + "Your choice: ");
         Scanner scanner = new Scanner(System.in);
         String choiceOfGame = scanner.nextLine();
-        switch (choiceOfGame) {
-            case("1"):
-                Cli.welcome();
-            case("2"):
-                Even.evenGame();
-            case("3"):
-                Calculate.calculateGame();
-            case("4"):
-                GCD.gcdGame();
-            case("5"):
-                Progression.progressionGame();
-            case("6"):
-                Prime.primeGame();
-            case("0"):
-                scanner.close();
-                System.exit(0);
-            default:
-                System.out.println("Error! Enter the correct value!");
-                main(null);
+        final int countOfRounds = 3;
+        if (choiceOfGame.equals("2")
+                || choiceOfGame.equals("3")
+                || choiceOfGame.equals("4")
+                || choiceOfGame.equals("5")
+                || choiceOfGame.equals("6")
+        ) {
+            Engine.greet();
+            for (int i = 0; i < countOfRounds; i++) {
+                Engine.choiceOfTheGame(choiceOfGame);
+            }
+            Engine.congratulations();
+            scanner.close();
+        } else {
+            switch (choiceOfGame) {
+                case ("1"):
+                    Cli.welcome();
+                    break;
+                case ("0"):
+                    scanner.close();
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Error! Enter the correct value!");
+                    main(null);
+            }
         }
     }
 }
