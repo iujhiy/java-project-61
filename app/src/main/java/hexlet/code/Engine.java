@@ -81,4 +81,28 @@ public class Engine {
                 break;
         }
     }
+    public static void gameSelection(String choiceOfGame) {
+        if (choiceOfGame.equals("2")
+                || choiceOfGame.equals("3")
+                || choiceOfGame.equals("4")
+                || choiceOfGame.equals("5")
+                || choiceOfGame.equals("6")
+        ) {
+            Engine.greet();
+            Engine.choiceOfTheGame(choiceOfGame);
+            Engine.congratulations();
+        } else {
+            switch (choiceOfGame) {
+                case ("1"):
+                    Cli.welcome();
+                    break;
+                case ("0"):
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Error! Enter the correct value!");
+                    App.main(null);
+            }
+        }
+    }
 }

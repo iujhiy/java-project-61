@@ -17,29 +17,7 @@ public class App {
                 """ + "Your choice: ");
         Scanner scanner = new Scanner(System.in);
         String choiceOfGame = scanner.nextLine();
-        if (choiceOfGame.equals("2")
-                || choiceOfGame.equals("3")
-                || choiceOfGame.equals("4")
-                || choiceOfGame.equals("5")
-                || choiceOfGame.equals("6")
-        ) {
-            Engine.greet();
-            Engine.choiceOfTheGame(choiceOfGame);
-            Engine.congratulations();
-            scanner.close();
-        } else {
-            switch (choiceOfGame) {
-                case ("1"):
-                    Cli.welcome();
-                    break;
-                case ("0"):
-                    scanner.close();
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Error! Enter the correct value!");
-                    main(null);
-            }
-        }
+        Engine.gameSelection(choiceOfGame);
+        scanner.close();
     }
 }
