@@ -3,8 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void primeGame() {
+    public static void rulesOfTheGame() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+    }
+    public static String[] primeGame() {
         final int minNumber = 2;
         final int maxNumber = 100;
         var randomNumber = Engine.randomNumber(minNumber, maxNumber);
@@ -17,9 +19,9 @@ public class Prime {
         }
         String task = String.valueOf(randomNumber);
         if (isPrime) {
-            Engine.theLogicOfTheGame("yes", task);
+            return new String[] {task, "yes"};
         } else {
-            Engine.theLogicOfTheGame("no", task);
+            return new String[] {task, "no"};
         }
     }
 }

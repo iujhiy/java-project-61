@@ -3,15 +3,17 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    public static void evenGame() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    public static String[] evenGame() {
         final int maxNumber = 100;
         String randomNumber = String.valueOf(Engine.randomNumber(1, maxNumber));
         int randomNumberToInteger = Integer.parseInt(randomNumber);
         if (randomNumberToInteger % 2 == 0) {
-            Engine.theLogicOfTheGame("yes", randomNumber);
+            return new String[] {randomNumber, "yes"};
         } else {
-            Engine.theLogicOfTheGame("no", randomNumber);
+            return new String[] {randomNumber, "no"};
         }
+    }
+    public static void rulesOfTheGame() {
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 }

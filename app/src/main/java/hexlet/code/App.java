@@ -17,7 +17,6 @@ public class App {
                 """ + "Your choice: ");
         Scanner scanner = new Scanner(System.in);
         String choiceOfGame = scanner.nextLine();
-        final int countOfRounds = 3;
         if (choiceOfGame.equals("2")
                 || choiceOfGame.equals("3")
                 || choiceOfGame.equals("4")
@@ -25,9 +24,7 @@ public class App {
                 || choiceOfGame.equals("6")
         ) {
             Engine.greet();
-            for (int i = 0; i < countOfRounds; i++) {
-                Engine.choiceOfTheGame(choiceOfGame);
-            }
+            Engine.choiceOfTheGame(choiceOfGame);
             Engine.congratulations();
             scanner.close();
         } else {

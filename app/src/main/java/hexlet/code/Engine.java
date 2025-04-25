@@ -24,7 +24,9 @@ public class Engine {
         return random.nextInt(min, max);
     }
 
-    public static void theLogicOfTheGame(String rightAnswer, String task) {
+    public static void theLogicOfTheGame(String[] taskAndRightAnswer) {
+        var task = taskAndRightAnswer[0];
+        var rightAnswer = taskAndRightAnswer[1];
         Scanner scanner = new Scanner(System.in);
         System.out.println("Question: " + task);
         System.out.print("Your answer: ");
@@ -45,21 +47,37 @@ public class Engine {
     }
 
     public static void choiceOfTheGame(String choice) {
+        final int countOfRounds = 3;
         switch (choice) {
             case ("2"):
-                Even.evenGame();
+                Even.rulesOfTheGame();
+                for (int i = 0; i < countOfRounds; i++) {
+                    Engine.theLogicOfTheGame(Even.evenGame());
+                }
                 break;
             case ("3"):
-                Calculate.calculateGame();
+                Calculate.rulesOfTheGame();
+                for (int i = 0; i < countOfRounds; i++) {
+                    Engine.theLogicOfTheGame(Calculate.calculateGame());
+                }
                 break;
             case ("4"):
-                GCD.gcdGame();
+                GCD.rulesOfTheGame();
+                for (int i = 0; i < countOfRounds; i++) {
+                    Engine.theLogicOfTheGame(GCD.gcdGame());
+                }
                 break;
             case ("5"):
-                Progression.progressionGame();
+                Progression.rulesOfTheGame();
+                for (int i = 0; i < countOfRounds; i++) {
+                    Engine.theLogicOfTheGame(Progression.progressionGame());
+                }
                 break;
             default:
-                Prime.primeGame();
+                Prime.rulesOfTheGame();
+                for (int i = 0; i < countOfRounds; i++) {
+                    Engine.theLogicOfTheGame(Prime.primeGame());
+                }
                 break;
         }
     }

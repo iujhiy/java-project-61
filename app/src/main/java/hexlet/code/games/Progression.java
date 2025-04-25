@@ -3,8 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    public static void progressionGame() {
+    public static void rulesOfTheGame() {
         System.out.println("What number is missing in the progression?");
+    }
+    public static String[] progressionGame() {
         final int minLengthOfProgression = 5;
         final int maxLengthOfProgression = 10;
         final int minStepOfProgression = 1;
@@ -23,6 +25,6 @@ public class Progression {
         var rightAnswer = progressionString[randomElement];
         progressionString[randomElement] = "..";
         String task = String.join(" ", progressionString);
-        Engine.theLogicOfTheGame(rightAnswer, task);
+        return new String[] {task, rightAnswer};
     }
 }
