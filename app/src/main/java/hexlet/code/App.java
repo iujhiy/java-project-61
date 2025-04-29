@@ -1,5 +1,11 @@
 package hexlet.code;
 
+import hexlet.code.games.Calculate;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+
 import java.util.Scanner;
 
 public class App {
@@ -17,7 +23,22 @@ public class App {
                 """ + "Your choice: ");
         Scanner scanner = new Scanner(System.in);
         String choiceOfGame = scanner.nextLine();
-        Engine.gameSelection(choiceOfGame);
+        switch (choiceOfGame) {
+            case("1"):
+                Cli.welcome();
+            case("2"):
+                Engine.run(Even.evenGame());
+            case("3"):
+                Engine.run(Calculate.calculateGame());
+            case("4"):
+                Engine.run(GCD.gcdGame());
+            case("5"):
+                Engine.run(Progression.progressionGame());
+            case("6"):
+                Engine.run(Prime.primeGame());
+            default:
+                System.out.println("Ошибка! Такой игры не существует!");
+        }
         scanner.close();
     }
 }

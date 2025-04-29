@@ -1,23 +1,27 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
-    public static void rulesOfTheGame() {
+    public static String[][] gcdGame() {
         System.out.println("Find the greatest common divisor of given numbers.");
-    }
-    public static String[] gcdGame() {
         final int minNumber = 1;
         final int maxNumber = 100;
-        int gcd = 1;
-        int randomNumber1 = Engine.randomNumber(minNumber, maxNumber);
-        int randomNumber2 = Engine.randomNumber(minNumber, maxNumber);
-        for (int j = 1; j <= randomNumber1 && j <= randomNumber2; j++) {
-            if (randomNumber1 % j == 0 && randomNumber2 % j == 0) {
-                gcd = j;
+        String[][] taskAndAnswers = new String[Utils.countOfRounds()][2];
+        for (var i = 0; i < Utils.countOfRounds(); i++) {
+            int gcd = 1;
+            int randomNumber1 = Utils.randomNumber(minNumber, maxNumber);
+            int randomNumber2 = Utils.randomNumber(minNumber, maxNumber);
+            for (int j = 1; j <= randomNumber1 && j <= randomNumber2; j++) {
+                if (randomNumber1 % j == 0 && randomNumber2 % j == 0) {
+                    gcd = j;
+                }
             }
+            String gcdString = String.valueOf(gcd);
+            var j = 0;
+            taskAndAnswers[i][j] = randomNumber1 + " " + randomNumber2;
+            taskAndAnswers[i][j + 1] = gcdString;
         }
-        String gcdString = String.valueOf(gcd);
-        return new String[] {randomNumber1 + " " + randomNumber2, gcdString};
+        return taskAndAnswers;
     }
 }

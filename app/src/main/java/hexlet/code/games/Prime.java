@@ -1,27 +1,32 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
-    public static void rulesOfTheGame() {
+    public static String[][] primeGame() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-    }
-    public static String[] primeGame() {
-        final int minNumber = 2;
-        final int maxNumber = 100;
-        var randomNumber = Engine.randomNumber(minNumber, maxNumber);
-        boolean isPrime = true;
-        for (int i = 2; i <= Math.sqrt(randomNumber); i++) {
-            if (randomNumber % i == 0) {
-                isPrime = false;
-                break;
+        String[][] taskAndAnswers = new String[Utils.countOfRounds()][2];
+        for (var i = 0; i < Utils.countOfRounds(); i++) {
+            var j = 0;
+            final int minNumber = 2;
+            final int maxNumber = 100;
+            var randomNumber = Utils.randomNumber(minNumber, maxNumber);
+            boolean isPrime = true;
+            for (int iterator = 2; iterator <= Math.sqrt(randomNumber); iterator++) {
+                if (randomNumber % iterator == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            String task = String.valueOf(randomNumber);
+            if (isPrime) {
+                taskAndAnswers[i][j] = task;
+                taskAndAnswers[i][j + 1] = "yes";
+            } else {
+                taskAndAnswers[i][j] = task;
+                taskAndAnswers[i][j + 1] = "no";
             }
         }
-        String task = String.valueOf(randomNumber);
-        if (isPrime) {
-            return new String[] {task, "yes"};
-        } else {
-            return new String[] {task, "no"};
-        }
+        return taskAndAnswers;
     }
 }
