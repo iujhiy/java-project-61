@@ -37,7 +37,7 @@ public class App {
             case("6"):
                 Engine.run(Prime.primeGame());
             default:
-                System.out.println("Ошибка! Такой игры не существует!");
+                System.out.println("Error! There is no such game.");
         }
         scanner.close();
     }
