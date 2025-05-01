@@ -1,10 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calculate {
-    public static String[][] calculateGame() {
-        System.out.println("What is the result of the expression?");
+    public static void calculateGame() {
+        String rules = "What is the result of the expression?";
         final int maxNumber = 100;
         final int maxSign = 3;
         String[][] taskAndAnswers = new String[Utils.countOfRounds()][2];
@@ -27,6 +28,6 @@ public class Calculate {
                 taskAndAnswers[i][j + 1] = compositionString;
             }
         }
-        return taskAndAnswers;
+        Engine.run(taskAndAnswers, rules);
     }
 }

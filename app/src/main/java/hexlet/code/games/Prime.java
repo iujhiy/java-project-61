@@ -1,10 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static String[][] primeGame() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+    public static void primeGame() {
+        String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] taskAndAnswers = new String[Utils.countOfRounds()][2];
         for (var i = 0; i < Utils.countOfRounds(); i++) {
             var j = 0;
@@ -27,6 +28,6 @@ public class Prime {
                 taskAndAnswers[i][j + 1] = "no";
             }
         }
-        return taskAndAnswers;
+        Engine.run(taskAndAnswers, rules);
     }
 }

@@ -27,15 +27,15 @@ public class App {
             case("1"):
                 Cli.welcome();
             case("2"):
-                Engine.run(Even.evenGame());
+                Even.evenGame();
             case("3"):
-                Engine.run(Calculate.calculateGame());
+                Calculate.calculateGame();
             case("4"):
-                Engine.run(GCD.gcdGame());
+                GCD.gcdGame();
             case("5"):
-                Engine.run(Progression.progressionGame());
+                Progression.progressionGame();
             case("6"):
-                Engine.run(Prime.primeGame());
+                Prime.primeGame();
             default:
                 System.out.println("Error! There is no such game.");
         }

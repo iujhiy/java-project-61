@@ -1,10 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
-    public static String[][] evenGame() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    public static void evenGame() {
+        String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         final int maxNumber = 100;
         String[][] taskAndAnswers = new String[Utils.countOfRounds()][2];
         for (var i = 0; i < Utils.countOfRounds(); i++) {
@@ -19,6 +20,6 @@ public class Even {
                 taskAndAnswers[i][j + 1] = "no";
             }
         }
-        return taskAndAnswers;
+        Engine.run(taskAndAnswers, rules);
     }
 }

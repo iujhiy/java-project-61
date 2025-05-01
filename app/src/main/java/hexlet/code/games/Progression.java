@@ -1,10 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static String[][] progressionGame() {
-        System.out.println("What number is missing in the progression?");
+    public static void progressionGame() {
+        String rules = "What number is missing in the progression?";
         final int minLengthOfProgression = 5;
         final int maxLengthOfProgression = 10;
         final int minStepOfProgression = 1;
@@ -29,6 +30,6 @@ public class Progression {
             taskAndAnswers[i][j]  = task;
             taskAndAnswers[i][j + 1] = rightAnswer;
         }
-        return taskAndAnswers;
+        Engine.run(taskAndAnswers, rules);
     }
 }
